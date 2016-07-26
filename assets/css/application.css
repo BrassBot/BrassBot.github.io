@@ -315,7 +315,10 @@ body {
   @media (min-width: 960px) {
     body {
       font-size: 125%; } }
-  @media (min-width: 1500px) {
+  @media (min-width: 1400px) {
+    body {
+      font-size: 150%; } }
+  @media (min-width: 1681px) {
     body {
       font-size: 175%; } }
 
