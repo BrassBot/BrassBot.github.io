@@ -1052,8 +1052,7 @@ section.client-logos {
     section.client-logos ul li {
       flex: 0 1 auto;
       width: 50%;
-      overflow: hidden;
-      /*@include tablet {width: 25%;}*/ }
+      overflow: hidden; }
       @media (min-width: 500px) {
         section.client-logos ul li {
           width: 33.3334%; } }
