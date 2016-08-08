@@ -139,6 +139,13 @@ RECODESIGN.initialiser = {
     }
   },
 
+  getYear: function() {
+    var year = new Date().getFullYear();
+    $('span.year').each(function() {
+      $(this).text(year);
+    });
+  },
+
   swiperSetup: function() {
     $('.case-study .swiper-carousel').each(function() {
       var swiper = new Swiper($(this).find('.swiper-container'), {
@@ -186,35 +193,33 @@ RECODESIGN.initialiser = {
 // Resize
 
 RECODESIGN.dom = {
-  resizeUpdate: function() {
-    
-  },
+  resizeUpdate: function() {},
 };
 
 // Call functions
 
 $(document).ready(function () {
-  var dsi = RECODESIGN.initialiser;
+  var rdi = RECODESIGN.initialiser;
 
-  //dsi.removeIndexes();
-  dsi.getHeights();
-  dsi.scrollTopClass();
-  dsi.checkTop();
-  dsi.mainElem();
-  dsi.mobileNav();
-  dsi.homepageIntro();
-  dsi.scrollToPosition();
-  dsi.workNavigation();
-  dsi.swiperSetup();
+  rdi.getHeights();
+  rdi.scrollTopClass();
+  rdi.checkTop();
+  rdi.mainElem();
+  rdi.mobileNav();
+  rdi.homepageIntro();
+  rdi.scrollToPosition();
+  rdi.workNavigation();
+  rdi.getYear();
+  rdi.swiperSetup();
 });
 
 $(window).resize(function() {
-  var dom = RECODESIGN.dom;
+  var dom = RECODESIGN.dom,
+      rdi = RECODESIGN.initialiser;
 
-  RECODESIGN.initialiser.getHeights();
-  RECODESIGN.initialiser.mainElem();
-  RECODESIGN.initialiser.homepageIntro();
+  rdi.getHeights();
+  rdi.mainElem();
+  rdi.homepageIntro();
 
   dom.resizeUpdate();
 });
-

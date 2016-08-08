@@ -897,9 +897,9 @@ footer[role="contentinfo"] {
     color: #eee; }
   footer[role="contentinfo"] div.info {
     font-size: 0.9em; }
-    footer[role="contentinfo"] div.info > :first-child {
+    footer[role="contentinfo"] div.info > p:first-child {
       margin-bottom: 0.5em; }
-    footer[role="contentinfo"] div.info span {
+    footer[role="contentinfo"] div.info > p:last-child span {
       display: block; }
 
 /* ------------------------------- */
