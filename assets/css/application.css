@@ -246,26 +246,24 @@ h4 {
   padding-bottom: 0.5em; }
 
 /* Formatting */
-.formatting {
-  /*b {font-weight: 600;}*/ }
-  .formatting h1, .formatting h2, .formatting h3, .formatting h4, .formatting h5, .formatting h6 {
-    margin-bottom: 0.8em; }
-  .formatting p, .formatting ul, .formatting ol, .formatting dl, .formatting blockquote, .formatting figure {
-    margin-bottom: 1.5em; }
-  .formatting ul, .formatting ol {
-    padding-left: 1.2em; }
-  .formatting ul {
-    list-style: disc; }
-  .formatting ol {
-    list-style: decimal; }
-  .formatting dd {
-    margin: 0 0 0 0.5em; }
-  .formatting dt {
-    margin: 1em 0 0;
-    font-weight: bold;
-    text-transform: uppercase; }
-    .formatting dt:first-child {
-      margin-top: 0; }
+.formatting h1, .formatting h2, .formatting h3, .formatting h4, .formatting h5, .formatting h6 {
+  margin-bottom: 0.8em; }
+.formatting p, .formatting ul, .formatting ol, .formatting dl, .formatting blockquote, .formatting table, .formatting figure {
+  margin-bottom: 1.5em; }
+.formatting ul, .formatting ol {
+  margin-left: 1.2em; }
+.formatting ul {
+  list-style: disc; }
+.formatting ol {
+  list-style: decimal; }
+.formatting dl dt {
+  margin: 1em 0 0;
+  font-weight: bold;
+  text-transform: uppercase; }
+  .formatting dl dt:first-child {
+    margin-top: 0; }
+.formatting dl dd {
+  margin: 0 0 0 0.5em; }
 
 .button, nav[role="navigation"] ul li a.contact {
   display: inline-block;
