@@ -51,6 +51,20 @@ RECODESIGN.initialiser = {
       e.preventDefault();
       $('body').toggleClass('nav-open');
       $(this).toggleClass('icon-menu icon-times');
+
+      if($('body').hasClass('nav-open')) {
+        var mobileNavAdditional = '<div class="additional-nav"></div>';
+        $(mobileNavAdditional).appendTo('nav[role="navigation"]');
+        $('footer[role="contentinfo"] ul.social').clone().appendTo('.additional-nav');
+        setTimeout(function() {
+          $('div.additional-nav').addClass('show');
+        }, 50);
+      } else {
+        $('div.additional-nav').removeClass('show');
+        setTimeout(function() {
+          $('div.additional-nav').remove();
+        }, 500);
+      }
     });
   },
 

@@ -31,6 +31,7 @@
     background-color: transparent;
     z-index: 0; } }
 /* Gutter Widths */
+/* Screen Heights */
 /* Screen Widths */
 @font-face {
   font-family: 'Source Sans Pro';
@@ -106,7 +107,7 @@ p a[class*="icon-"]:before {
 .icon-external-link:after {
   content: "\e905"; }
 
-/* CUSTOM CHANGE */
+/* /CUSTOM CHANGE */
 .icon-angle-down:before {
   content: "\e900"; }
 
@@ -195,8 +196,7 @@ a {
   font-weight: 600;
   color: #1b1b1b;
   text-decoration: none;
-  transition: color 0.1s, background 0.1s;
-  /*&.divide:after {content: " \007C"; color: #333;}*/ }
+  transition: color 0.1s, background 0.1s; }
   a:hover, a:focus {
     color: #1b1b1b; }
   .formatting a:not(.button) {
@@ -265,7 +265,7 @@ h4 {
 .formatting dl dd {
   margin: 0 0 0 0.5em; }
 
-.button, nav[role="navigation"] ul li a.contact {
+.button, nav[role="navigation"] > ul li a.contact {
   display: inline-block;
   border-radius: 3em;
   padding: 0.6em 1em;
@@ -280,12 +280,12 @@ h4 {
   text-transform: uppercase;
   -webkit-appearance: none;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15); }
-  .button:hover, nav[role="navigation"] ul li a.contact:hover {
+  .button:hover, nav[role="navigation"] > ul li a.contact:hover {
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 100px rgba(255, 255, 255, 0.15); }
-  .button.small, nav[role="navigation"] ul li a.contact {
+  .button.small, nav[role="navigation"] > ul li a.contact {
     padding: 0.4em 1em;
     font-size: 0.9em; }
-  .cta-divide .button, .cta-divide nav[role="navigation"] ul li a.contact, nav[role="navigation"] ul li .cta-divide a.contact {
+  .cta-divide .button, .cta-divide nav[role="navigation"] > ul li a.contact, nav[role="navigation"] > ul li .cta-divide a.contact {
     overflow: hidden;
     position: relative;
     display: block;
@@ -295,12 +295,12 @@ h4 {
     text-align: right;
     font-size: 1.2em; }
     @media (min-width: 769px) {
-      .cta-divide .button, .cta-divide nav[role="navigation"] ul li a.contact, nav[role="navigation"] ul li .cta-divide a.contact {
+      .cta-divide .button, .cta-divide nav[role="navigation"] > ul li a.contact, nav[role="navigation"] > ul li .cta-divide a.contact {
         display: inline-block;
         margin: 0;
         border-radius: 3em;
         font-size: 1.15em; } }
-    .cta-divide .button:after, .cta-divide nav[role="navigation"] ul li a.contact:after, nav[role="navigation"] ul li .cta-divide a.contact:after {
+    .cta-divide .button:after, .cta-divide nav[role="navigation"] > ul li a.contact:after, nav[role="navigation"] > ul li .cta-divide a.contact:after {
       position: absolute;
       right: -1px;
       top: -1px;
@@ -309,7 +309,7 @@ h4 {
       background: url(../img/bgs/button-cta.svg) no-repeat 0 50%;
       background-size: auto 100%;
       content: ""; }
-  .button.icon-external-link:after, nav[role="navigation"] ul li a.icon-external-link.contact:after {
+  .button.icon-external-link:after, nav[role="navigation"] > ul li a.icon-external-link.contact:after {
     margin-left: 0.5em;
     font-size: 0.75em; }
 
@@ -617,117 +617,6 @@ header[role="banner"] {
     -webkit-flex: auto;
         -ms-flex: auto;
             flex: auto; } }
-nav[role="navigation"] ul {
-  position: fixed;
-  top: -1500px;
-  left: 0;
-  right: 0;
-  bottom: 100%;
-  z-index: 2;
-  padding: 3em 0 0.5em;
-  background: rgba(0, 0, 0, 0.85);
-  text-align: center;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 0.5s, top 0s 0.5s, bottom 0s 0.5s; }
-  .nav-open nav[role="navigation"] ul {
-    top: 0;
-    bottom: 0;
-    opacity: 1;
-    transition: opacity 0.5s; }
-  @media (min-width: 769px) {
-    nav[role="navigation"] ul {
-      position: static;
-      padding: 1em 0;
-      background: none;
-      font-size: 1em;
-      opacity: 1; } }
-  nav[role="navigation"] ul li {
-    display: block;
-    white-space: nowrap;
-    opacity: 0;
-    -webkit-transform: translate3d(0, -80px, 0);
-            transform: translate3d(0, -80px, 0);
-    transition: -webkit-transform 0.2s, opacity 0.2s;
-    transition: transform 0.2s, opacity 0.2s; }
-    .nav-open nav[role="navigation"] ul li {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-      transition: -webkit-transform 0.5s, opacity 0.5s;
-      transition: transform 0.5s, opacity 0.5s;
-      transition-delay: 0.025s; }
-      .nav-open nav[role="navigation"] ul li:nth-child(2) {
-        transition-delay: 0.05s; }
-      .nav-open nav[role="navigation"] ul li:nth-child(3) {
-        transition-delay: 0.075s; }
-      .nav-open nav[role="navigation"] ul li:nth-child(4) {
-        transition-delay: 0.1s; }
-      .nav-open nav[role="navigation"] ul li:nth-child(5) {
-        transition-delay: 0.125s; }
-    @media (min-width: 769px) {
-      nav[role="navigation"] ul li {
-        float: left;
-        margin: 0 15px;
-        opacity: 1;
-        -webkit-transform: none;
-                transform: none; }
-        nav[role="navigation"] ul li:first-child {
-          position: absolute;
-          left: -1000em; } }
-    nav[role="navigation"] ul li:last-child {
-      margin-top: 15px; }
-      @media (min-width: 769px) {
-        nav[role="navigation"] ul li:last-child {
-          float: right;
-          margin: 0; } }
-    nav[role="navigation"] ul li a {
-      position: relative;
-      display: inline-block;
-      padding: 0.5em 1em;
-      font-weight: 400;
-      color: white;
-      outline: none;
-      transition: color 0.3s; }
-      nav[role="navigation"] ul li a.current:not(.contact) {
-        color: #F6D056; }
-      @media (min-width: 769px) {
-        nav[role="navigation"] ul li a {
-          border: 0;
-          padding: 0.3em 0;
-          font-weight: 700; }
-          nav[role="navigation"] ul li a:not(.contact):before, nav[role="navigation"] ul li a:not(.contact):after {
-            display: block;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            right: 50%;
-            height: 2px;
-            background: white;
-            content: "";
-            opacity: 0;
-            transition: left 0.3s, right 0.3s, opacity 0s 0.3s; }
-            .nav-intro nav[role="navigation"] ul li a:not(.contact):before, .nav-intro nav[role="navigation"] ul li a:not(.contact):after {
-              background: #1b1b1b; }
-          .nav-intro nav[role="navigation"] ul li a:not(.contact) {
-            color: #2D2D2D;
-            transition: color 0.3s 0.8s; }
-          nav[role="navigation"] ul li a:not(.contact):hover:before, nav[role="navigation"] ul li a:not(.contact):hover:after, nav[role="navigation"] ul li a:not(.contact).current:before, nav[role="navigation"] ul li a:not(.contact).current:after {
-            opacity: 1;
-            transition: left 0.3s, right 0.3s; }
-          nav[role="navigation"] ul li a:not(.contact).current:before, nav[role="navigation"] ul li a:not(.contact).current:after {
-            background: rgba(255, 255, 255, 0.15); }
-          nav[role="navigation"] ul li a:not(.contact):hover:before, nav[role="navigation"] ul li a:not(.contact).current:before {
-            left: 0; }
-          nav[role="navigation"] ul li a:not(.contact):hover:after, nav[role="navigation"] ul li a:not(.contact).current:after {
-            right: 0; } }
-      nav[role="navigation"] ul li a span {
-        position: absolute;
-        left: -1000em; }
-        @media (min-width: 960px) {
-          nav[role="navigation"] ul li a span {
-            position: static; } }
 nav[role="navigation"] h2 {
   display: block;
   position: absolute;
@@ -761,6 +650,154 @@ nav[role="navigation"] h2 {
     nav[role="navigation"] h2 a span {
       position: absolute;
       left: -1000em; }
+nav[role="navigation"] > ul {
+  position: fixed;
+  top: -1500px;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  z-index: 2;
+  padding: 1.5em 0 0;
+  background: rgba(0, 0, 0, 0.85);
+  text-align: center;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.5s, top 0s 0.5s, bottom 0s 0.5s; }
+  .nav-open nav[role="navigation"] > ul {
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: opacity 0.5s; }
+  @media (min-width: 375px) {
+    nav[role="navigation"] > ul {
+      padding-top: 3em; } }
+  @media (min-width: 769px) {
+    nav[role="navigation"] > ul {
+      position: static;
+      padding: 1em 0;
+      background: none;
+      font-size: 1em;
+      opacity: 1; } }
+  nav[role="navigation"] > ul li {
+    display: block;
+    white-space: nowrap;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -80px, 0);
+            transform: translate3d(0, -80px, 0);
+    transition: -webkit-transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s; }
+    .nav-open nav[role="navigation"] > ul li {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+      transition: -webkit-transform 0.5s, opacity 0.5s;
+      transition: transform 0.5s, opacity 0.5s;
+      transition-delay: 0.025s; }
+      .nav-open nav[role="navigation"] > ul li:nth-child(2) {
+        transition-delay: 0.05s; }
+      .nav-open nav[role="navigation"] > ul li:nth-child(3) {
+        transition-delay: 0.075s; }
+      .nav-open nav[role="navigation"] > ul li:nth-child(4) {
+        transition-delay: 0.1s; }
+      .nav-open nav[role="navigation"] > ul li:nth-child(5) {
+        transition-delay: 0.125s; }
+    @media (min-width: 769px) {
+      nav[role="navigation"] > ul li {
+        float: left;
+        margin: 0 15px;
+        opacity: 1;
+        -webkit-transform: none;
+                transform: none; }
+        nav[role="navigation"] > ul li:first-child {
+          position: absolute;
+          left: -1000em; } }
+    nav[role="navigation"] > ul li:last-child {
+      margin-top: 15px; }
+      @media (min-width: 769px) {
+        nav[role="navigation"] > ul li:last-child {
+          float: right;
+          margin: 0; } }
+    nav[role="navigation"] > ul li a {
+      position: relative;
+      display: inline-block;
+      padding: 0.5em 1em;
+      font-weight: 400;
+      color: white;
+      outline: none;
+      transition: color 0.3s; }
+      nav[role="navigation"] > ul li a.current:not(.contact) {
+        color: #F6D056; }
+      @media (min-width: 769px) {
+        nav[role="navigation"] > ul li a {
+          border: 0;
+          padding: 0.3em 0;
+          font-weight: 700; }
+          nav[role="navigation"] > ul li a:not(.contact):before, nav[role="navigation"] > ul li a:not(.contact):after {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            right: 50%;
+            height: 2px;
+            background: white;
+            content: "";
+            opacity: 0;
+            transition: left 0.3s, right 0.3s, opacity 0s 0.3s; }
+            .nav-intro nav[role="navigation"] > ul li a:not(.contact):before, .nav-intro nav[role="navigation"] > ul li a:not(.contact):after {
+              background: #1b1b1b; }
+          .nav-intro nav[role="navigation"] > ul li a:not(.contact) {
+            color: #2D2D2D;
+            transition: color 0.3s 0.8s; }
+          nav[role="navigation"] > ul li a:not(.contact):hover:before, nav[role="navigation"] > ul li a:not(.contact):hover:after, nav[role="navigation"] > ul li a:not(.contact).current:before, nav[role="navigation"] > ul li a:not(.contact).current:after {
+            opacity: 1;
+            transition: left 0.3s, right 0.3s; }
+          nav[role="navigation"] > ul li a:not(.contact).current:before, nav[role="navigation"] > ul li a:not(.contact).current:after {
+            background: rgba(255, 255, 255, 0.15); }
+          nav[role="navigation"] > ul li a:not(.contact):hover:before, nav[role="navigation"] > ul li a:not(.contact).current:before {
+            left: 0; }
+          nav[role="navigation"] > ul li a:not(.contact):hover:after, nav[role="navigation"] > ul li a:not(.contact).current:after {
+            right: 0; } }
+      nav[role="navigation"] > ul li a span {
+        position: absolute;
+        left: -1000em; }
+        @media (min-width: 960px) {
+          nav[role="navigation"] > ul li a span {
+            position: static; } }
+nav[role="navigation"] div.additional-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: translate3d(0, -80px, 0);
+          transform: translate3d(0, -80px, 0);
+  transition: -webkit-transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s, opacity 0.2s; }
+  @media (max-height: 459px) {
+    nav[role="navigation"] div.additional-nav {
+      display: none; } }
+  @media (min-width: 769px) {
+    nav[role="navigation"] div.additional-nav {
+      position: absolute;
+      left: -1000em; } }
+  nav[role="navigation"] div.additional-nav.show {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition-delay: 0.1s; }
+  nav[role="navigation"] div.additional-nav ul.social {
+    margin: 2em 0;
+    font-size: 1em; }
+    @media (min-width: 375px) {
+      nav[role="navigation"] div.additional-nav ul.social {
+        font-size: 1.3em; } }
+    nav[role="navigation"] div.additional-nav ul.social li a {
+      color: white; }
 
 /* ------------------------------- */
 /* =Main */
@@ -1109,7 +1146,7 @@ section.client-logos {
               flex: 0 1 auto;
       width: 50%;
       overflow: hidden; }
-      @media (min-width: 500px) {
+      @media (min-width: 618px) {
         section.client-logos ul li {
           width: 33.3334%; } }
       @media (min-width: 960px) {
@@ -1266,7 +1303,7 @@ section.work {
   section.work div.wrap {
     max-width: 17em;
     transition: max-width 0.5s; }
-    @media (min-width: 500px) {
+    @media (min-width: 618px) {
       section.work div.wrap {
         max-width: 32em; } }
     @media (min-width: 960px) {
@@ -1314,7 +1351,7 @@ section.work {
     section.work ol.timeline li {
       position: relative;
       margin-top: 2em; }
-      @media (min-width: 500px) {
+      @media (min-width: 618px) {
         section.work ol.timeline li {
           width: 50%; }
           section.work ol.timeline li:nth-child(2) {
@@ -1353,7 +1390,7 @@ section.work {
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
         transition: background 0.1s;
         -webkit-backface-visibility: hidden; }
-        @media (min-width: 500px) {
+        @media (min-width: 618px) {
           section.work ol.timeline li a,
           section.work ol.timeline li > span {
             width: 70%; } }
@@ -1400,7 +1437,7 @@ section.case-study {
         background: no-repeat 50% 100%;
         background-size: auto 100%;
         content: ""; }
-        @media (min-width: 500px) {
+        @media (min-width: 618px) {
           section.case-study div.wrap h1:before {
             height: 2.5em; } }
       section.case-study div.wrap h1 span {
