@@ -212,7 +212,7 @@ RECODESIGN.dom = {
 
 // Call functions
 
-$(document).ready(function () {
+$(document).ready(function() {
   var rdi = RECODESIGN.initialiser;
 
   rdi.getHeights();
