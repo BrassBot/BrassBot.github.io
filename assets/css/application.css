@@ -1245,6 +1245,7 @@ section.testimonials {
       padding-bottom: 2em; } }
 
 ul.quotes {
+  margin-left: 0;
   padding: 0;
   list-style: none;
   text-align: center; }
