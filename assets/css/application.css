@@ -871,7 +871,7 @@ ul.tags {
     margin: 3px 2px;
     border-radius: 0.2em;
     padding: 0.25em 0.5em;
-    background: rgba(0, 0, 0, 0.05);
+    background: #eaeaea;
     list-style: none; }
 
 .box {
@@ -879,7 +879,7 @@ ul.tags {
   margin-bottom: 1em;
   border-radius: 0.5em;
   padding: 1em;
-  background: rgba(0, 0, 0, 0.05); }
+  background: #eaeaea; }
   .box > :last-child {
     margin-bottom: 0; }
   .box h3 {
@@ -929,11 +929,11 @@ ul.social {
 footer[role="contentinfo"] {
   padding: 3em 0;
   text-align: center;
-  color: #eee; }
+  color: #eaeaea; }
   .case-study footer[role="contentinfo"] {
     padding-bottom: 5em; }
   footer[role="contentinfo"] a {
-    color: #eee; }
+    color: #eaeaea; }
   footer[role="contentinfo"] div.info {
     font-size: 0.9em; }
     footer[role="contentinfo"] div.info > p:first-child {
@@ -957,10 +957,13 @@ section.contact {
   text-align: center; }
 
 section.about div.intro {
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: center; }
   @media (min-width: 769px) {
     section.about div.intro {
-      background: #F6D056; }
+      border-bottom: 0.75em solid #1b1b1b;
+      background: #eaeaea;
+      text-align: left; }
       section.about div.intro div.wrap {
         position: relative;
         padding: 4em;
@@ -1146,7 +1149,7 @@ section.featured-work.swiper-carousel {
         background-size: auto 100%; }
 
 section.client-logos {
-  background: #eee; }
+  background: #eaeaea; }
   @media (min-width: 769px) {
     section.client-logos {
       padding-bottom: 2em; } }
@@ -1258,7 +1261,7 @@ figure.avatar {
   max-width: 10em; }
   figure.avatar img {
     display: block;
-    border: 0.6em solid #eee;
+    border: 0.6em solid #eaeaea;
     border-radius: 50%;
     width: 100%;
     box-sizing: border-box; }
@@ -1266,7 +1269,7 @@ figure.avatar {
       border-color: rgba(255, 255, 255, 0.05); }
       @media (min-width: 769px) {
         .home figure.avatar img {
-          border-color: #eee; } }
+          border-color: #eaeaea; } }
 
 section.testimonials {
   text-align: center; }
@@ -1294,7 +1297,7 @@ ul.quotes {
         margin-bottom: 1.75em;
         border-radius: 0.75em;
         padding: 1em;
-        background: rgba(0, 0, 0, 0.075); }
+        background: #eaeaea; }
         @media (min-width: 769px) {
           ul.quotes li blockquote div {
             padding: 1.5em; } }
@@ -1304,7 +1307,7 @@ ul.quotes {
           left: 46%;
           border: solid transparent;
           border-width: 0 0.9em 1.3em 0;
-          border-right-color: rgba(0, 0, 0, 0.075);
+          border-right-color: #eaeaea;
           content: ""; }
         ul.quotes li blockquote div p {
           margin-bottom: 1em;
@@ -1349,7 +1352,7 @@ section.work {
       margin-top: 0.5em;
       border-radius: 0.5em;
       padding: 0.5em 1em;
-      background: #e5e5e5;
+      background: #eaeaea;
       font-size: 0.4em;
       text-transform: uppercase;
       font-weight: 700;
@@ -1366,7 +1369,7 @@ section.work {
       z-index: 1;
       margin-left: -2px;
       width: 4px;
-      background: #e5e5e5;
+      background: #eaeaea;
       content: ""; }
     section.work ol.timeline:after {
       position: absolute;
@@ -1377,7 +1380,7 @@ section.work {
       border-radius: 50%;
       width: 1em;
       height: 1em;
-      background: #e5e5e5;
+      background: #eaeaea;
       content: ""; }
     section.work ol.timeline li {
       position: relative;
@@ -1393,7 +1396,7 @@ section.work {
             left: 50%;
             right: 0;
             margin-top: -2px;
-            border-top: 4px dotted #e5e5e5;
+            border-top: 4px dotted #eaeaea;
             height: 0;
             content: ""; }
           section.work ol.timeline li:nth-child(odd) {
