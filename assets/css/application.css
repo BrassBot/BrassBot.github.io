@@ -199,11 +199,11 @@ a {
   transition: color 0.1s, background 0.1s; }
   a:hover, a:focus {
     color: #1b1b1b; }
-  .formatting a:not(.button) {
+  .formatting a:not(.button):not(.avatar a) {
     border-radius: 2px;
     padding: 0 2px;
     background: rgba(246, 208, 86, 0.5); }
-    .formatting a:not(.button):hover, .formatting a:not(.button):focus {
+    .formatting a:not(.button):not(.avatar a):hover, .formatting a:not(.button):not(.avatar a):focus {
       background: #F6D056; }
 
 /* Headings */
@@ -810,7 +810,11 @@ main[role="main"] {
   .home main[role="main"] {
     padding-bottom: 0; }
   body:not(.home) main[role="main"] {
-    padding-top: 6em; }
+    margin-top: 4em;
+    padding-top: 2em; }
+  @media (min-width: 769px) {
+    body.about main[role="main"] {
+      padding-top: 0; } }
 
 /* General */
 acronym {
@@ -952,17 +956,40 @@ section.contact div.wrap {
 section.contact {
   text-align: center; }
 
-section.about div.wrap div.intro {
+section.about div.intro {
   overflow: hidden; }
   @media (min-width: 769px) {
-    section.about div.wrap div.intro figure {
-      float: right;
-      margin: 0 0 0 2em; } }
-  section.about div.wrap div.intro p {
-    margin: 0.75em 0 0;
+    section.about div.intro {
+      background: #F6D056; }
+      section.about div.intro div.wrap {
+        position: relative;
+        padding: 4em;
+        max-width: 50em; }
+        section.about div.intro div.wrap:after {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          top: 0;
+          width: 50%;
+          background: url(../img/content/me-large.jpg) no-repeat 100% 100%;
+          background-size: auto 100%;
+          content: ""; }
+      section.about div.intro h1 {
+        position: absolute;
+        left: -1000em; }
+      section.about div.intro figure {
+        display: none; } }
+  section.about div.intro p {
+    margin: 0;
     font-size: 1.2em; }
-section.about div.wrap > h2,
-section.about div.wrap > h3 {
+    @media (min-width: 769px) {
+      section.about div.intro p {
+        width: 50%;
+        font-size: 1.4em;
+        font-weight: 300; } }
+    section.about div.intro p b {
+      font-weight: 700; }
+section.about h2, section.about h3 {
   text-align: center; }
 
 section.homepage-intro {

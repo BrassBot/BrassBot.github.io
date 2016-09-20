@@ -43,7 +43,7 @@ RECODESIGN.initialiser = {
   },
 
   mainElem: function() {
-    $('body:not(.home) main[role="main"]').css('padding-top',(headerHeight+40));
+    $('body:not(.home) main[role="main"]').css('margin-top',(headerHeight));
   },
 
   mobileNav: function() {
