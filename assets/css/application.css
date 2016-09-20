@@ -970,6 +970,7 @@ section.about div.intro {
           right: 0;
           bottom: 0;
           top: 0;
+          z-index: 1;
           width: 50%;
           background: url(../img/content/me-large.jpg) no-repeat 100% 100%;
           background-size: auto 100%;
@@ -984,7 +985,9 @@ section.about div.intro {
     font-size: 1.2em; }
     @media (min-width: 769px) {
       section.about div.intro p {
-        width: 50%;
+        position: relative;
+        z-index: 2;
+        width: 52%;
         font-size: 1.4em;
         font-weight: 300; } }
     section.about div.intro p b {
