@@ -961,7 +961,7 @@ section.about div.intro {
   text-align: center; }
   @media (min-width: 769px) {
     section.about div.intro {
-      border-bottom: 0.75em solid #1b1b1b;
+      margin-bottom: 2em;
       background: #eee;
       text-align: left; }
       section.about div.intro div.wrap {
@@ -995,8 +995,11 @@ section.about div.intro {
         font-weight: 300; } }
     section.about div.intro p b {
       font-weight: 700; }
-section.about h2, section.about h3 {
+section.about div.wrap h2, section.about div.wrap h3 {
   text-align: center; }
+@media (min-width: 769px) {
+  section.about div.wrap h2:first-child:before {
+    content: none; } }
 
 section.homepage-intro {
   display: -webkit-flex;
