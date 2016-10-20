@@ -1266,17 +1266,17 @@ figure.avatar {
   figure.avatar a:not(.xyz) {
     padding: 0;
     background: none; }
-    figure.avatar a:not(.xyz) img {
-      display: block;
-      border: 0.6em solid #eee;
-      border-radius: 50%;
-      width: 100%;
-      box-sizing: border-box; }
-      .home figure.avatar a:not(.xyz) img {
-        border-color: rgba(255, 255, 255, 0.05); }
-        @media (min-width: 769px) {
-          .home figure.avatar a:not(.xyz) img {
-            border-color: #eee; } }
+  figure.avatar img {
+    display: block;
+    border: 0.6em solid #eee;
+    border-radius: 50%;
+    width: 100%;
+    box-sizing: border-box; }
+    .home figure.avatar img {
+      border-color: rgba(255, 255, 255, 0.05); }
+      @media (min-width: 769px) {
+        .home figure.avatar img {
+          border-color: #eee; } }
 
 section.testimonials {
   text-align: center; }
